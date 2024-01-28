@@ -337,7 +337,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                Shalee
                 
             </div>
 
@@ -349,9 +349,9 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "做个好人",
+                                "朝闻道，夕死可矣。",
                             
-                                "Be an angel",
+                                "面对愚昧，神们自己也缄口无言……",
                             
                         ],
                         startDelay: 300,
@@ -397,10 +397,43 @@
             </div>
             <div class="tag-chips">
                 
+                
+                <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91%E8%87%AA%E5%B7%B1/" title="关于我自己: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="关于我自己" style="background-color: #F9EBEA;">关于我自己
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
 </div>
+
+    
+    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"关于我自己","weight":1,"link":"/tags/关于我自己/"}], {
+        autoResize: true
+    });
+</script>
 
     
 
@@ -426,7 +459,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">73</span>
+                        class="white-color">0</span>
             
             
             
@@ -770,6 +803,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-z16"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"log":false});</script></body>
 
 </html>

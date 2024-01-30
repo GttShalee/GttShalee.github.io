@@ -61,6 +61,8 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
+
+	<link rel="stylesheet" type="text/css" href="/css/loading.css">
 <meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -643,6 +645,11 @@
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">1</a></span>
+    <span class="name">分类</span>
+</div>
+
 
 
 <div class="statis">
@@ -667,6 +674,11 @@
 </div>
 
 
+
+<div class="statis">
+    <span class="count"><a href="/categories">1</a></span>
+    <span class="name">分类</span>
+</div>
 
 
 
@@ -857,7 +869,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"shalee","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -881,7 +893,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["关于我自己","Hexo博客搭建"]
+                data: ["Hexo博客搭建","关于我自己"]
             }
         ],
         yAxis: [
@@ -1064,14 +1076,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91%E8%87%AA%E5%B7%B1/">
-                <span class="chip center-align waves-effect waves-light chip-default">关于我自己</span>
+            <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="chip center-align waves-effect waves-light chip-default">Hexo博客搭建</span>
             </a>
             
             
             
-            <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                <span class="chip center-align waves-effect waves-light chip-default">Hexo博客搭建</span>
+            <a href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91%E8%87%AA%E5%B7%B1/">
+                <span class="chip center-align waves-effect waves-light chip-default">关于我自己</span>
             </a>
             
             
@@ -1143,7 +1155,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">758</span>
+                        class="white-color">770</span>
             
             
             
@@ -1482,6 +1494,17 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+
+	<!-- 冒泡 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/libs/others/buble.js"><\/script>'
+        );
+    </script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-z16"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"log":false});</script></body>
 

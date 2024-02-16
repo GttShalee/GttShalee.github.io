@@ -684,6 +684,11 @@
         
 
         
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -721,27 +726,38 @@
 <h2>python的使用</h2>
 python是一门很容易入手的计算机语言，主要原因就是它的实用性以及直观性。
 首先我们选取网站后，需要先尝试与其连接（本质上就是让python充当浏览器访问其服务器）。基本语法为：
-<pre><code>
+
+<pre>
+
 import requests
 from bs4 import BeautifulSoup
 respond = requests.get("网站url")
-</code></pre>
-其中request以及BeautifulSoup分别是两个库，第一个是获取链接需要的（下文的request就是其中的方法）；另外一个是处理网页内容的。
-可以百度详细了解内容。那么怎么确认是否访问成功呢？
-<pre><code>
+
+</pre>
+
+<p>其中request以及BeautifulSoup分别是两个库，第一个是获取链接需要的（下文的request就是其中的方法）；另外一个是处理网页内容的。<br>可以百度详细了解内容。那么怎么确认是否访问成功呢？</p>
+<pre>
 import requests
 
-<p>response &#x3D; requests.get(“<a href="https://gttshalee.github.io/">https://gttshalee.github.io/</a>“)</p>
-<p>if response.ok:<br>    print(response.text)</p>
-<p>else:<br>    print(“失败”)</p>
-<p></code></pre><br>我们知道404是网页不存在的代号，其实还有很多不同错误的代号。只要前面不是1开头统统是连接失败。具体原因可以自行了解。</p>
+response = requests.get("https://gttshalee.github.io/")
+
+if response.ok:
+    print(response.text)
+
+else:
+    print("失败")
+</pre>
+
+<p>我们知道404是网页不存在的代号，其实还有很多不同错误的代号。只要前面不是1开头统统是连接失败。具体原因可以自行了解。</p>
 <p>下面是爬去豆瓣250电影名字的代码块。</p>
-<pre><code>
+<pre>
 import requests
 
-head = &#123;
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
-&#125;
+head = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) 
+    AppleWebKit/537.36 (KHTML, like Gecko) 
+    Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+}
 from bs4 import BeautifulSoup
 
 Title = requests.get("https://movie.douban.com/top250", headers=head)
@@ -754,9 +770,10 @@ all_title = soup.findAll("title")
 
 for title in all_title:
     print(title.string)
-</code></pre>
+</pre>
 
-<p>实际上，豆瓣官网无法直接通过python获取链接。这时候就需要我们利用一些手段来欺骗网站服务器，让其以为我们是通过浏览器登录的好网民。<br>注意到上述代码中有一个head，这个就是我们伪装的帽子。那么head里面的内容在哪里呢？<br>这时候需要我们打开所要爬去的网页，右键点开检查，在控制台中选择network，点击打开<br>出现如下页面：<br>&lt;img<br>    src&#x3D;”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/GttShalee/Blog-pic/Screenshot%202024-02-16%20at%2021.34.30.png">https://cdn.jsdelivr.net/gh/GttShalee/Blog-pic/Screenshot%202024-02-16%20at%2021.34.30.png</a>“</p>
+<p>实际上，豆瓣官网无法直接通过python获取链接。这时候就需要我们利用一些手段来欺骗网站服务器，让其以为我们是通过浏览器登录的好网民。<br>注意到上述代码中有一个head，这个就是我们伪装的帽子。那么head里面的内容在哪里呢？<br>这时候需要我们打开所要爬去的网页，右键点开检查，在控制台中选择network，点击打开<br>出现如下页面：</p>
+<p>&lt;img<br>    src&#x3D;”<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/GttShalee/Blog-pic/Screenshot%202024-02-16%20at%2021.34.30.png">https://cdn.jsdelivr.net/gh/GttShalee/Blog-pic/Screenshot%202024-02-16%20at%2021.34.30.png</a>“</p>
 <blockquote>
 </blockquote>
 <p>我们任意选择一条，双击打开在最下面会有User-Agent,复制后面的代码，将其拷贝在请求的开始，这样就相当于用浏览器用户伪装python进行request请求。<br>至此，我们几乎可以获取任何的互联网上的内容，但是获取容易处理难。下一期我将整理一下爬虫的数据处理。<br>记住，爬虫是学习技术，而不是我们充当违反法律的武器。</p>
@@ -1739,6 +1756,16 @@ $(function () {
     
 
     <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
     <!-- Baidu Push -->
 
